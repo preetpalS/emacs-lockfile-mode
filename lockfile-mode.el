@@ -1,7 +1,7 @@
 ;;; lockfile-mode.el --- Major mode for .lock files -*- lexical-binding: t; -*-
 
 ;; Author: Preetpal S. Sohal
-;; URL:
+;; URL: https://gist.github.com/preetpalS/85800a0e64b3ee85d634413ad219fa06
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.3"))
 ;; License: GNU General Public License Version 3
@@ -37,5 +37,5 @@
 
 ;; Open files ending in `.lock' as readonly files.
 (add-hook 'lockfile-mode-hook #'lockfile--make-buffer-read-only)
-​
+
 (provide 'lockfile-mode)
