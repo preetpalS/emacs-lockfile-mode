@@ -26,7 +26,7 @@
 
 ;;; Code:
 
-(defun lockfile--make-buffer-read-only () "Makes buffer readonly." (read-only-mode 1))
+(defun lockfile--make-buffer-read-only () "Make buffer readonly." (read-only-mode 1))
 
 (define-derived-mode lockfile-mode fundamental-mode "lockfile"
   "A minimalistic major mode for `.lock' files."
@@ -39,3 +39,5 @@
 (add-hook 'lockfile-mode-hook #'lockfile--make-buffer-read-only)
 
 (provide 'lockfile-mode)
+
+;;; lockfile-mode.el ends here
