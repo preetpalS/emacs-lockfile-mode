@@ -1,9 +1,9 @@
 ;;; lockfile-mode.el --- Major mode for .lock files -*- lexical-binding: t; -*-
 
 ;; Author: Preetpal S. Sohal
-;; URL: https://gist.github.com/preetpalS/85800a0e64b3ee85d634413ad219fa06
-;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.3"))
+;; URL: https://github.com/preetpalS/emacs-lockfile-mode
+;; Version: 0.1.0
+;; Package-Requires: ((emacs "25.1"))
 ;; License: GNU General Public License Version 3
 
 ;; This program is free software; you can redistribute it and/or modify
