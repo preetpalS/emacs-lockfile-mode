@@ -3,7 +3,6 @@
 ;; Author: Preetpal S. Sohal
 ;; URL: https://github.com/preetpalS/emacs-lockfile-mode
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "25.1"))
 ;; License: GNU General Public License Version 3
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -22,21 +21,18 @@
 ;;; Commentary:
 
 ;; Usage:
-;; (require 'lockfile-mode)
+;; (require 'lockfile-mode) ; unless installed from a package
 
 ;;; Code:
 
-(defun lockfile--make-buffer-read-only () "Make buffer readonly." (read-only-mode 1))
-
+;;;###autoload
 (define-derived-mode lockfile-mode fundamental-mode "lockfile"
   "A minimalistic major mode for `.lock' files."
-  :abbrev-table nil)
+  :abbrev-table nil
+  (setq buffer-read-only t))
 
-;; Associate `.lock' files with lockfile-mode
-(add-to-list 'auto-mode-alist '("\\.lock$" . lockfile-mode))
-
-;; Open files ending in `.lock' as readonly files.
-(add-hook 'lockfile-mode-hook #'lockfile--make-buffer-read-only)
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.lock\\'" . lockfile-mode))
 
 (provide 'lockfile-mode)
 
